@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+               
+               <bean id="r1" class="com.vm.client.Restaurant">
+               <property name="name" value="ABC"></property>
+               <property name="iHotDrink" ref="c"></property>
+               <property name="Employees">
+               <list>
+               <value> jashu </value>
+               <value> bharath </value>
+               <value> jai </value>
+               </list>
+               </property>
+               
+               <property name="Menus">
+               <set>
+               <value> idly </value>
+               <value> dosa </value>
+               </set>
+               </property>
+               </bean>
+               
+               <bean id="t" class="com.vm.client.Tea"></bean>
+               <bean id="c" class="com.vm.client.Coffee"></bean>
+               </beans>
